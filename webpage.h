@@ -546,42 +546,7 @@ const char htmlPage[] PROGMEM = R"rawliteral(
       });
   }, 2000);
     
-      function start(e) {
-        drawing = true;
-        const p = getPos(e);
-        lastX = p.x; lastY = p.y;
-        e.preventDefault();
-      }
-
-      function draw(e) {
-        if (!drawing) return;
-        const p = getPos(e);
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(p.x, p.y);
-        ctx.stroke();
-        lastX = p.x; lastY = p.y;
-        e.preventDefault();
-      }
-
-      function stop(e) {
-        drawing = false;
-        e.preventDefault();
-      }
-
-      canvas.addEventListener('mousedown', start);
-      canvas.addEventListener('touchstart', start);
-      canvas.addEventListener('mousemove', draw);
-      canvas.addEventListener('touchmove', draw);
-      canvas.addEventListener('mouseup', stop);
-      canvas.addEventListener('mouseout', stop);
-      canvas.addEventListener('touchend', stop);
-
-      window.clearBoard = function() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-      };
-    })();
-  </script>
+F  </script>
 </body>
 </html>
 )rawliteral";
